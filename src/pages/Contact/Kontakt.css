@@ -1,0 +1,32 @@
+.contactMain{
+  background-color: rgb(232, 230, 228);
+  min-height: 85vh;
+  display: flex; 
+}
+.container {
+  flex: 1; 
+}
+.contactrow{
+  height: 80vh;
+}
+.contactImg{
+  height: auto;
+  width: 100%;
+}
+input{
+
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+textarea{
+
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+}
+
+.contactBtn{
+  background-color: white;
+}

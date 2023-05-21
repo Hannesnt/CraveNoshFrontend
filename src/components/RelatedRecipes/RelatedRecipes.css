@@ -1,0 +1,8 @@
+.relatedRecipeImg{
+    width: 100%;
+    height: auto;
+}
+.relatedContainer{
+    background-color: rgb(232, 230, 228);
+    border: 1px solid gray;
+}

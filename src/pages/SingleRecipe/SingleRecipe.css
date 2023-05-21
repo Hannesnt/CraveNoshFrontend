@@ -1,0 +1,202 @@
+  .buttonDiv{
+    text-align: center;
+  }
+  .ServingsBtn{
+    margin: 0 3px;
+    cursor: pointer;
+    padding: 0px 6px
+  }
+  
+  .AntalServings{
+    font-size: 20px;
+    
+  }
+  .PrepDivDad{
+    display: flex;
+    margin-top: 20px;
+  }
+  .RecipeCardShow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+  }
+
+  
+
+
+  .Prep{
+    display: flex;
+    justify-content: center;
+  }
+  .PrepDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 10px;
+  }
+  .PrepDiv span:first-child {
+    margin-top: auto;
+    text-align: center;
+  }
+  .Line{
+    border-left: 3px solid black;
+    height: 48px;
+    margin-top: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .singleRecipeContainer{
+    border: 1px solid black;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  .TitleUnderLine{
+    margin: 6px 130px
+  }
+
+  .IngrediensAndImg{
+    display: flex;
+  }
+  .IconAndIngrediens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Ingrediens {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .IngrediensDiv{
+    flex-direction: column;
+  }
+ .recipeheader{
+  margin-top: 15vh;
+ }
+
+  ol {
+    counter-reset: item;
+    padding-left: 0;
+  }
+  
+  ol li {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  ol li::before {
+    content: counter(item);
+    counter-increment: item;
+    font-size: 2rem;
+    font-weight:500;
+    margin-right: 10px;
+  }
+  ol li p{
+    display: inline;
+    margin: 0;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  li{
+    margin-bottom: 10px;
+  }
+  li span{
+    margin-right: 3px;
+  }
+  .line{
+    height: 2px;
+    width: 200px;
+    margin: 20px 0px;
+  }
+  .reminderMsg{
+    background-color: pink;
+    padding: 10px 5px;
+    border-radius: 10px;
+  }
+  .reminderMsg p{
+    margin-bottom: 0;
+  }
+  .carouselImage{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+
+  li p a{
+    text-decoration: underline;
+  }
+  li p a:hover{
+    opacity: 0.5;
+  }
+  .ingrediensLi p{
+    margin-bottom: 0;
+    line-height: 2;
+  }
+  .ingrediensP{
+    font-size: 18px;
+    margin: 10px 0;
+
+  }
+
+  li h5, h6{
+    margin-top: 20px;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  .singleRecipeMain{
+    background-color: rgb(232, 230, 228);
+    border-bottom: 1px solid gray;
+  }
+  .stepsP{
+    margin-top: 17px;
+    font-size: 18px;
+    text-decoration: underline;
+  }
+  .singlePageHr{
+    margin: 80px 150px;
+    height: 4px;
+    background-color: black;
+    color: black;
+  }
+  .singleRecipeTitleMobile{
+    display: none;
+  }
+  .singleRecipeTitleWideScreen{
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    .singleRecipeTitleMobile{
+      display: flex;
+    }
+    .singleRecipeTitleWideScreen{
+      display: none;
+    }
+  }
+@media screen and (max-width: 770px) {
+  .CommentForm{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .CommentTextArea{
+    order: 2;
+  }
+  .CommentInput{
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .carouselImage{
+    height: auto;
+    width: 100%;
+  }
+
+  .footerHr{
+    margin: 30px 70px;
+  }
+}

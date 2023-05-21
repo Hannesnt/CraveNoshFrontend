@@ -1,0 +1,14 @@
+.pageLinkDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+  }
+    .pageLinksBtn{
+      margin: 5px;
+      background-color: rgb(201, 196, 190);
+    }
+    .pageLinksBtn.active{
+      background-color: rgb(201, 196, 190);
+      border: 0;
+      opacity: 0.5;
+    }

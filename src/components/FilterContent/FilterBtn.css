@@ -1,0 +1,49 @@
+.filterBtnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .selectFilterDiv{
+    display: flex;
+    justify-content: flex-end;
+  }
+  #filterBtn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(201, 196, 190);
+    padding: 2rem;
+    color: black;
+  }
+  .filterBtn{
+    margin: 0px 3vw;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid rgb(201, 196, 190);
+  }
+  .filterBtnMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid rgb(201, 196, 190);
+    color: black;
+  }
+  .filterNumber{
+    margin-left: 4px;
+  }
+
+  @media screen and (max-width: 992px){
+    .filterBtn{
+      margin: 0px 5;
+
+    }
+  }
+  @media screen and (max-width: 330px){
+    .filterBtn{
+
+      font-size: 10px;
+    }
+  }

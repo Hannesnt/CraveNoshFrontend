@@ -1,0 +1,82 @@
+.instagramDivNav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+}
+.navbar{
+  background-color: rgb(201, 196, 190);
+}
+.navbar-collapse{
+  justify-content: space-between;
+}
+.navbar-expand-lg .navbar-nav{
+  justify-content: space-evenly;
+}
+a.FontIcon{
+    margin: 0 auto;
+    padding-bottom: 0px;
+    padding-top: 7.5px;
+    margin-left: 5px;
+    opacity: 1 !important;
+    color: black !important;
+  }
+  .FontIcon:hover{
+    opacity: 0.3;
+  }
+
+  a.navbar-brand{
+    padding-bottom: 8px;
+  }
+
+  .nav-link{
+
+    font-size: medium;
+    font-weight: bold;
+  }
+a.searchBtn{
+  background-color: transparent;
+  border: 0;
+  padding-right: 20px;
+
+}
+svg{
+  color: rgb(114, 112, 112) !important;
+}
+input.me-2.form-control{
+  background-color: transparent;
+  border: 0;
+  font-size: medium;
+  font-weight: bold;
+}
+  .navbar-brand{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchBarForm{
+    justify-content: center;
+    align-items: center;
+  }
+  .form-control{
+    width: 207.4px;
+
+  }
+  @media screen and (max-width: 992px){
+    .navbar-nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .FontIcon{
+      
+    }
+    .searchBtn{
+      order: 2;
+    }
+    a.searchBtn{
+      margin: 0;
+      
+    }
+  }
