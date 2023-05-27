@@ -1,4 +1,5 @@
-const getApiUrl = () => {
-  return process.env["CRAVENOSH_API_URL"];
-};
+function getApiUrl() {
+  return process.env["REACT_APP_CRAVENOSH_API_URL"];
+}
+
 export default getApiUrl;
