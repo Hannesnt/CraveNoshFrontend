@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import getApiUrl from "./baseurl";
 function FilterBtnFetch() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -7,7 +8,7 @@ function FilterBtnFetch() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`http://localhost:1337/api/tags`);
+        const response = await fetch(`${getApiUrl()}/api/tags`);
         const json = await response.json();
         setData(json);
         setLoading(false);

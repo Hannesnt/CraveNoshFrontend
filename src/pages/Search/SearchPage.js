@@ -3,6 +3,7 @@ import SearchFetch from "../../hooks/SearchFetch";
 import { Link, useLocation } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
 import { RotatingLines } from "react-loader-spinner";
+import getApiUrl from "../../hooks/baseurl";
 function SearchPage() {
   const { search } = useLocation();
   const params = new URLSearchParams(search);
@@ -46,7 +47,9 @@ function SearchPage() {
               <div key={`${data.id}-${index}`}>
                 <Link to={`/Recept/${data.id}`}>
                   <img
-                    src={`http://localhost:1337${data.attributes.thumbnail.data.attributes.url}`}
+                    src={`${getApiUrl()}${
+                      data.attributes.thumbnail.data.attributes.url
+                    }`}
                     alt={data.attributes.title}
                   />
                   <div className="TitleAndDescription mt-2">

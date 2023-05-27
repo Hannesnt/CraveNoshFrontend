@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomeRecipeCard.css";
-
+import getApiUrl from "../../hooks/baseurl";
 function HomeRecipeCardGroup(data) {
   return (
     <div>
@@ -11,7 +11,9 @@ function HomeRecipeCardGroup(data) {
             <div key={`${recipe.id}-${index}`}>
               <Link to={`/recept/${recipe.id}`}>
                 <img
-                  src={`http://localhost:1337${recipe.attributes.thumbnail.data.attributes.url}`}
+                  src={`${getApiUrl()}${
+                    recipe.attributes.thumbnail.data.attributes.url
+                  }`}
                   alt={recipe.attributes.title}
                 />
                 <div className="TitleAndDescription mt-2">

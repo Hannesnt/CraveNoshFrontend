@@ -3,6 +3,7 @@ import FetchFilteredRecipes from "../../hooks/FetchFilteredRecipes";
 import { Link } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import "./RelatedRecipes.css";
+import getApiUrl from "../../hooks/baseurl";
 function RelatedRecipes(props) {
   const { relatedLoading, relatedError, relatedData } = FetchFilteredRecipes(
     props.tagId
@@ -36,7 +37,9 @@ function RelatedRecipes(props) {
               <div className="col-8 col-sm-6 col-md-12">
                 <Link to={`/recept/${data.id}`}>
                   <img
-                    src={`http://localhost:1337${data.attributes.thumbnail.data.attributes.url}`}
+                    src={`${getApiUrl()}${
+                      data.attributes.thumbnail.data.attributes.url
+                    }`}
                     alt={data.attributes.title}
                     className="relatedRecipeImg"
                   />

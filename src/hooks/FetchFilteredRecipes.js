@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import qs from "qs";
+import getApiUrl from "./baseurl";
 function FetchFilteredRecipes(filter) {
   const [relatedData, setRelatedData] = useState(null);
   const [relatedError, setError] = useState(null);
@@ -19,9 +20,7 @@ function FetchFilteredRecipes(filter) {
             },
           },
         });
-        const response = await fetch(
-          `http://localhost:1337/api/recepts?${query}`
-        );
+        const response = await fetch(`${getApiUrl()}/api/recepts?${query}`);
         const json = await response.json();
         setRelatedData(json);
         setLoading(false);

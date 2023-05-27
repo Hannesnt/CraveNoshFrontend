@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import qs from "qs";
+import getApiUrl from "./baseurl";
 const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -16,9 +17,7 @@ const useFetch = (url) => {
             pageSize: 8,
           },
         });
-        const response = await fetch(
-          `http://localhost:1337/api/recepts?${query}`
-        );
+        const response = await fetch(`${getApiUrl()}/api/recepts?${query}`);
         const json = await response.json();
         setData(json);
         setLoading(false);

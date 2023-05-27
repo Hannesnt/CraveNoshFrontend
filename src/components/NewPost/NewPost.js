@@ -3,6 +3,7 @@ import "./NewPost.css";
 import "../../Global.css";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
+import getApiUrl from "../../hooks/baseurl";
 function NewPost(data) {
   return (
     <div className="maindivNewPost">
@@ -18,7 +19,9 @@ function NewPost(data) {
                         <Link to={`/recept/${data.data.data[0].id}`}>
                           <img
                             className="d-block carouselImageNew"
-                            src={`http://localhost:1337${carouselImage.attributes.url}`}
+                            src={`${getApiUrl()}${
+                              carouselImage.attributes.url
+                            }`}
                             alt={carouselImage.title}
                           />
                         </Link>

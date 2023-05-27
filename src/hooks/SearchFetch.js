@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import getApiUrl from "./baseurl";
 import qs from "qs";
 function SearchFetch(searchText) {
   const [data, setData] = useState(null);
@@ -13,9 +14,7 @@ function SearchFetch(searchText) {
           populate: ["thumbnail", "tags"],
           sort: "createdAt:desc",
         });
-        const response = await fetch(
-          `http://localhost:1337/api/recepts?${query}`
-        );
+        const response = await fetch(`${getApiUrl()}/api/recepts?${query}`);
         const json = await response.json();
         setData(json);
         setLoading(false);
