@@ -24,10 +24,10 @@ function About() {
                 <hr className="hrAboutTop"></hr>
                 <p>
                   Mitt namn är Elizabeth och jag driver bloggen CRAVE NOSH.
-                  Matlagning har varit en stor del av mitt liv sedan barsben och
-                  idag är intresset för matlagning större än någonsin. Tack vare
-                  mitt andra stora intresse, vilket är restaurangbesök, har jag
-                  kunnat kamma hem matinspirationer från olika kulturer både
+                  Matlagning har varit en stor del av mitt liv sedan barnsben
+                  och idag är intresset för matlagning större än någonsin. Tack
+                  vare mitt andra stora intresse, vilket är restaurangbesök, har
+                  jag kunnat kamma hem matinspirationer från olika kulturer både
                   inrikes och utrikes.
                 </p>
                 <p>

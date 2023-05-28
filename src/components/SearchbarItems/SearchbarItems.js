@@ -37,7 +37,7 @@ function SearchbarItems({ searchText, setSearchText }) {
               return (
                 <div className="searchResults" key={item.id}>
                   <Link to={`/recept/${item.id}`}>
-                    <p onClick={() => setSearchText("")}>
+                    <p className="p-2" onClick={() => setSearchText("")}>
                       {item.attributes.title}
                     </p>
                   </Link>

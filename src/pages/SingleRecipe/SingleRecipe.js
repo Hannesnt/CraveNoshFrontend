@@ -71,7 +71,6 @@ function SingleRecipe({ saveToLocalStorage }) {
     const match = line.match(regex);
     const number = match ? parseFloat(match[1]) : null;
     const text = match ? line.slice(match[0].length) : line;
-
     return {
       line,
       number,

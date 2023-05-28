@@ -13,7 +13,7 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
               setFilter([4]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category ChickenCategory"
+            className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category"
           >
             <div className="">
               <span>BAKVERK</span>
@@ -25,7 +25,7 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
               setFilter([5]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category   MeatCategory"
+            className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category"
           >
             <div className="">
               <span>FISK / SKALDJUR</span>
@@ -37,7 +37,7 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
               setFilter([6]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5 VegetarianCategory"
+            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
               <span>FÅGEL</span>
@@ -46,10 +46,10 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           <Link
             to={`/recept`}
             onClick={() => {
-              setFilter([7]);
+              setFilter([10]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5 AsianCategory"
+            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
               <span>KÖTT</span>
@@ -58,10 +58,10 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           <Link
             to={`/recept`}
             onClick={() => {
-              setFilter([8]);
+              setFilter([19]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5 VeganCategory"
+            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
               <span>VEGANSKT</span>
@@ -70,10 +70,10 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           <Link
             to={`/recept`}
             onClick={() => {
-              setFilter([9]);
+              setFilter([20]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
-            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5 BakingCategory"
+            className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
               <span>VEGETARISKT</span>

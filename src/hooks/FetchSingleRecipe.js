@@ -23,7 +23,6 @@ function FetchSingleRecipe(id) {
               $eq: id,
             },
           },
-          sort: ["comments.createdAt:desc"],
         });
         const response = await fetch(`${getApiUrl()}/api/recepts?${query}`);
         const json = await response.json();
