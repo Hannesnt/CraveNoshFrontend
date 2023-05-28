@@ -2,16 +2,27 @@ import React from "react";
 import contactVideo from "../../videos/CraveNoshContactVideo.mov";
 import "./About.css";
 function About() {
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   return (
     <div>
       <div className="container mt-5">
         <div className="row justify-content-center ">
           <div className="col-11 flex-column flex-lg-row d-flex justify-content-center justify-content-lg-evenly align-items-md-center">
             <div className="col-12 col-md-9 col-lg-4 videoDiv d-flex justify-content-center">
-              <video className="AboutVideo" autoPlay muted>
-                <source src={contactVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {isMobile ? (
+                <video className="AboutVideo" muted controls>
+                  <source src={contactVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <video className="AboutVideo" muted autoPlay loop>
+                  <source src={contactVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </div>
             <div className="col-12 mb-5 mb-lg-0 col-lg-6 d-flex justify-content-center aboutTextDiv">
               <div className="col-10 col-lg-10 d-flex justify-content-center flex-column">
