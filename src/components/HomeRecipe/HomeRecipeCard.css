@@ -11,7 +11,7 @@
   .RecipeCard img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .RecipeCard h5{
     height: 50px;
@@ -28,7 +28,7 @@
   .RecipeCardGroupDiv{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /**/
+    flex-wrap: wrap; 
   }
 
   .TitleAndDescription{
@@ -52,7 +52,6 @@
   .RecipeCardGroupDiv div{
     display: flex;
     flex-wrap: wrap;
-    width: calc(30% -15px * 3/4);
   }
   .RecipeCardGroupDiv div a{
     height: 515px;

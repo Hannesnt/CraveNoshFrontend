@@ -5,6 +5,7 @@ function Contact() {
   const [author, setAuthor] = useState(null);
   const [email, setEmail] = useState(null);
   const [commentText, setCommentText] = useState(null);
+  const [thanksVisible, setThanksVisible] = useState(false);
   let CommentData = {
     data: {
       Email: email,
@@ -12,6 +13,17 @@ function Contact() {
       Subject: commentText,
     },
   };
+
+  function commentSubmit() {
+    setEmail(null);
+    setAuthor(null);
+    setCommentText(null);
+    setThanksVisible(true);
+  }
+  setTimeout(() => {
+    setThanksVisible(false);
+  }, 10000);
+
   return (
     <div className="contactMain">
       <div className="container " id="CommentForm">
@@ -26,6 +38,10 @@ function Contact() {
                 e.preventDefault();
                 if (e.target.checkValidity()) {
                   postContactData(CommentData);
+                  commentSubmit();
+                  document.getElementById("name").value = "";
+                  document.getElementById("email").value = "";
+                  document.getElementById("message").value = "";
                 }
               }}
             >
@@ -66,6 +82,9 @@ function Contact() {
                 </button>
               </div>
             </form>
+            <div className="mt-3" id="submitMessage">
+              {thanksVisible ? <h4>Tack för ditt meddelande!</h4> : ""}
+            </div>
           </div>
         </div>
       </div>
