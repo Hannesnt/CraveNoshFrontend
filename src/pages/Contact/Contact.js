@@ -20,9 +20,6 @@ function Contact() {
     setCommentText(null);
     setThanksVisible(true);
   }
-  setTimeout(() => {
-    setThanksVisible(false);
-  }, 10000);
 
   return (
     <div className="contactMain">
@@ -42,6 +39,9 @@ function Contact() {
                   document.getElementById("name").value = "";
                   document.getElementById("email").value = "";
                   document.getElementById("message").value = "";
+                  setTimeout(() => {
+                    setThanksVisible(false);
+                  }, 6000);
                 }
               }}
             >
