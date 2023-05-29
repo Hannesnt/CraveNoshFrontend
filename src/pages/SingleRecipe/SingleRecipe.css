@@ -4,7 +4,10 @@
   .ServingsBtn{
     margin: 0 3px;
     cursor: pointer;
-    padding: 0px 6px
+    font-weight: bolder;
+    padding: 0px 9px;
+    font-size: 18px;
+    line-height: 0px;
   }
   
   .AntalServings{

@@ -76,7 +76,6 @@ function SingleRecipe({ saveToLocalStorage }) {
       text,
     };
   });
-
   return (
     <div>
       <div className="singleRecipeMain">
@@ -231,19 +230,7 @@ function SingleRecipe({ saveToLocalStorage }) {
         </div>
       </div>
       <RecipeKey />
-      <div className="row gx-0">
-        <div className="col-12 d-flex mb-5 flex-column flex-lg-row">
-          <div className="col-12 col-lg-3 d-flex text-center align-items-lg-center justify-content-center mb-5 mb-lg-0">
-            <h4>LIKNANDE RECEPT:</h4>
-          </div>
-          <div className="col-12 col-lg-9 d-flex justify-content-center justify-content-lg-between">
-            <RelatedRecipes
-              tagId={data.data[0].attributes.tags.data[0].id}
-              id={id}
-            />
-          </div>
-        </div>
-      </div>
+      <RelatedRecipes data={data.data[0].attributes.relatedRecept} id={id} />
     </div>
   );
 }

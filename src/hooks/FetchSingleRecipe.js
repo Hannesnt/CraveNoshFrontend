@@ -17,6 +17,8 @@ function FetchSingleRecipe(id) {
             "recipe_keys.image",
             "carousel",
             "tags",
+            "relatedRecept",
+            "relatedRecept.thumbnail",
           ],
           filters: {
             id: {
