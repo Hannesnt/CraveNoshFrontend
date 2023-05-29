@@ -3,7 +3,6 @@ import "./NewPost.css";
 import "../../Global.css";
 import { Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-import getApiUrl from "../../hooks/baseurl";
 function NewPost(data) {
   return (
     <div className="maindivNewPost">
@@ -11,25 +10,25 @@ function NewPost(data) {
         <div className="row newPostRow ">
           <div className="newImg  col-12 col-sm-8 mt-3 mt-lg-0 col-lg-5">
             <div className="col-6 col-md-6 d-flex justify-content-center">
-              <Carousel>
-                {data.data.data[0].attributes.NewRecipeImage.data.map(
-                  (carouselImage) => {
-                    return (
-                      <Carousel.Item key={carouselImage.id}>
-                        <Link to={`/recept/${data.data.data[0].id}`}>
-                          <img
-                            className="d-block carouselImageNew"
-                            src={`${getApiUrl()}${
-                              carouselImage.attributes.url
-                            }`}
-                            alt={carouselImage.title}
-                          />
-                        </Link>
-                      </Carousel.Item>
-                    );
-                  }
-                )}
-              </Carousel>
+              {
+                <Carousel>
+                  {data.data.data[0].attributes.NewRecipeImage.data.map(
+                    (carouselImage) => {
+                      return (
+                        <Carousel.Item key={carouselImage.id}>
+                          <Link to={`/recept/${data.data.data[0].id}`}>
+                            <img
+                              className="d-block carouselImageNew"
+                              src={`${carouselImage.attributes.url}`}
+                              alt={carouselImage.title}
+                            />
+                          </Link>
+                        </Carousel.Item>
+                      );
+                    }
+                  )}
+                </Carousel>
+              }
             </div>
           </div>
           <div className="newTextContainer md-mb-0  col-12 col-sm-10 col-md-8 col-lg-5">

@@ -11,7 +11,6 @@ import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import { faBookmark as BookmarkSolid } from "@fortawesome/free-solid-svg-icons";
 import { RotatingLines } from "react-loader-spinner";
 import RelatedRecipes from "../../components/RelatedRecipes/RelatedRecipes";
-import getApiUrl from "../../hooks/baseurl";
 function SingleRecipe({ saveToLocalStorage }) {
   const { id } = useParams();
   const [clicked, setClicked] = useState(false);
@@ -96,9 +95,7 @@ function SingleRecipe({ saveToLocalStorage }) {
                           <Carousel.Item key={carouselImage.id}>
                             <img
                               className="d-block carouselImage"
-                              src={`${getApiUrl()}${
-                                carouselImage.attributes.url
-                              }`}
+                              src={`${carouselImage.attributes.url}`}
                               alt={carouselImage.title}
                             />
                           </Carousel.Item>

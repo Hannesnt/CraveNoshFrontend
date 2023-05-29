@@ -1,7 +1,6 @@
 import React from "react";
 import "./Favorites.css";
 import { Link } from "react-router-dom";
-import getApiUrl from "../../hooks/baseurl";
 function Favorites() {
   let favoritesArray = [];
   for (let i = 0; i < localStorage.length; i++) {
@@ -19,9 +18,7 @@ function Favorites() {
             <div key={`${data.id}-${index}`}>
               <Link to={`/recept/${data.id}`}>
                 <img
-                  src={`${getApiUrl()}${
-                    data.attributes.thumbnail.data.attributes.url
-                  }`}
+                  src={`${data.attributes.thumbnail.data.attributes.url}`}
                   alt={data.attributes.title}
                 />
                 <div className="TitleAndDescription mt-2">

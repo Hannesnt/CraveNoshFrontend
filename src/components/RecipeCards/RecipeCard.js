@@ -4,7 +4,6 @@ import "./RecipeCard.css";
 import FetchFilteredRecipes from "../../hooks/FetchFilteredRecipes";
 import Pagination from "../Pagination/Pagination";
 import { RotatingLines } from "react-loader-spinner";
-import getApiUrl from "../../hooks/baseurl";
 function RecipeCard({ filter, setCurrentPage, currentPage }) {
   const { relatedLoading, relatedError, relatedData } =
     FetchFilteredRecipes(filter);
@@ -37,9 +36,7 @@ function RecipeCard({ filter, setCurrentPage, currentPage }) {
             <div key={`${data.id}-${index}`}>
               <Link to={`/recept/${data.id}`}>
                 <img
-                  src={`${getApiUrl()}${
-                    data.attributes.thumbnail.data.attributes.url
-                  }`}
+                  src={`${data.attributes.thumbnail.data.attributes.url}`}
                   alt={data.attributes.title}
                 />
                 <div className="TitleAndDescription mt-2">
