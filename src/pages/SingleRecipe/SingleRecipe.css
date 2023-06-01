@@ -172,7 +172,9 @@
   .singleRecipeTitleWideScreen{
     display: block;
   }
-
+  .bookMark{
+    cursor: pointer;
+  }
   @media screen and (max-width: 767px) {
     .singleRecipeTitleMobile{
       display: flex;

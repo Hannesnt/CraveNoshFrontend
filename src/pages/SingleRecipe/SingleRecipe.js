@@ -210,7 +210,7 @@ function SingleRecipe({ saveToLocalStorage }) {
         <div className="me-2">
           <h4>SPARA RECEPT</h4>
         </div>
-        <div className="ms-2">
+        <div className="ms-2 bookMark">
           {clicked ? (
             <span onClick={favoritesClick}>
               {" "}
