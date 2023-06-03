@@ -11,9 +11,3 @@ hr{
   .HomeLink{
     font-weight:bold;
   }
-  .footerHr{
-    margin: 30px 150px;
-    height: 4px;
-    background-color: black;
-    color: black;
-  }

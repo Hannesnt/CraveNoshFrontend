@@ -31,7 +31,7 @@ function Favorites() {
           ))}
         </div>
       </div>
-      <hr className="hrFooterFavorites"></hr>
+      <hr className="hrFooter"></hr>
     </div>
   );
 }

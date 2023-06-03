@@ -63,9 +63,10 @@
     width: 100%;
     object-fit: contain;
   }
-  .hrHomeFooter{
-    margin-top: 15vh;
+  .hrFooter{
+    margin: 0 auto;
     margin-bottom: 5vh;
+    width: 80%;
   }
 
   @media screen and (max-width: 900px){

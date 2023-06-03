@@ -30,3 +30,14 @@ textarea{
 .contactBtn{
   background-color: white;
 }
+
+@media screen and (max-height: 450px) {
+ .contactMain{
+  padding-bottom: 10vw;
+ }
+}
+@media screen and (max-height: 300px) {
+  .contactMain{
+    padding-bottom: 20vw;
+   }
+}
