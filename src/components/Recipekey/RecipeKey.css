@@ -1,7 +1,7 @@
   .recipeKey{
     background-color: rgb(201, 196, 190);
     border: 1px solid black;
-    height: 15vh;
+    height: 7rem;
     display: flex;
     align-items: center;
     margin: 70px 0px;
@@ -22,9 +22,6 @@
     font-weight: bold;
   }
   @media screen and (max-width: 769px) {
-    .recipeKey{
-      height: 20vh;
-    }
     .recipeKeyContainer{
       display: flex;
       flex-direction: column;
