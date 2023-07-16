@@ -147,13 +147,15 @@
 
   li h5, h6{
     margin-top: 20px;
-    font-style: italic;
     text-decoration: underline;
   }
 
   .singleRecipeMain{
     background-color: rgb(232, 230, 228);
     border-bottom: 1px solid gray;
+  }
+  .stepsDiv h5{
+    text-decoration: underline;
   }
   .stepsP{
     margin-top: 17px;
