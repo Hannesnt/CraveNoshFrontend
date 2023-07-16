@@ -23,7 +23,7 @@ function HomeRecipeCardGroup(data) {
           ))}
         </div>
       </div>
-      <hr className="hrFooter"></hr>
+      <hr className="hrFooter mt-3"></hr>
     </div>
   );
 }
