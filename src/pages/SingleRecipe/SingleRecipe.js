@@ -196,7 +196,7 @@ function SingleRecipe({ saveToLocalStorage }) {
             </div>
             <div className="col-12 col-md-7 d-flex justify-content-center">
               <div className="col-12 d-flex justify-content-center align-items-md-center flex-column">
-                <div className="col-12 col-md-8">
+                <div className="col-12 col-md-8 stepsDiv">
                   <p className="stepsP text-center">Gör så här:</p>
                   <ReactMarkdown>{data.data[0].attributes.steps}</ReactMarkdown>
                 </div>
