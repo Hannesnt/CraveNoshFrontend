@@ -127,12 +127,12 @@ function SingleRecipe({ saveToLocalStorage }) {
                   <div className="d-flex flex-row my-5 justify-content-center col-12">
                     <div className="PrepDiv">
                       <span className="PrepPara">Prep Time:</span>
-                      <span>{data.data[0].attributes.prepTime}</span>
+                      <span>{data.data[0].attributes.prepTime} min</span>
                     </div>
                     <div className="Line"></div>
                     <div className="PrepDiv">
                       <span>Cook time:</span>
-                      <span>{data.data[0].attributes.cookTime}</span>
+                      <span>{data.data[0].attributes.cookTime} min</span>
                     </div>
                     <div className="Line"></div>
                     <div className="PrepDiv">
