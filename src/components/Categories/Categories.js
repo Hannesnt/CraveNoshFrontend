@@ -58,13 +58,13 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           <Link
             to={`/recept`}
             onClick={() => {
-              setFilter([19]);
+              setFilter([16]);
               setNumberOfFilter(numberOfFilter + 1);
             }}
             className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
-              <span>VEGANSKT</span>
+              <span>SMÅRÄTTER</span>
             </div>
           </Link>
           <Link
