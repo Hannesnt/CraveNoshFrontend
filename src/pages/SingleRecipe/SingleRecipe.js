@@ -108,7 +108,7 @@ function SingleRecipe({ saveToLocalStorage }) {
                 <div className="col-12 d-flex flex-column justify-content-center">
                   <div className="col-md-12  d-flex justify-content-sm-center ">
                     <div className="singleRecipeTitleWideScreen mt-md-3 justify-content-sm-center  col-12 text-center">
-                      <h1>{data.data[0].attributes.title}</h1>
+                      <h1>{data.data[0].attributes.title.toUpperCase()}</h1>
                     </div>
                   </div>
                   {antalServings !== 4 ? (
@@ -151,7 +151,7 @@ function SingleRecipe({ saveToLocalStorage }) {
                   <div className="col-12 d-flex justify-content-center mb-4">
                     <div className="col-10 col-md-12 col-sm-8 col-md-10 col-lg-8">
                       <div className="text-center">
-                        {data.data[0].attributes.description.substring(0, 300)}
+                        {data.data[0].attributes.description}
                       </div>
                     </div>
                   </div>

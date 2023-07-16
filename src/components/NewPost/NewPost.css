@@ -17,6 +17,7 @@
 .carouselImageNew{
   height: 600px;
   width: 450px;
+  object-fit: contain;
 }
 .newTextContainer{
   display: flex;
