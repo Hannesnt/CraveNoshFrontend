@@ -4,6 +4,8 @@ import FilterBtnFetch from "../../hooks/FilterBtnFetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { RotatingLines } from "react-loader-spinner";
+import { useSelector, useDispatch } from 'react-redux';
+import { addFilter } from "../../redux/filter/filterSlice";
 function FilterBtn({
   filter,
   setFilter,
@@ -11,8 +13,13 @@ function FilterBtn({
   numberOfFilter,
   setNumberOfFilter,
 }) {
-  const [toggle, setToggle] = useState(false);
 
+  const filtertest = useSelector((state) => state.filter)
+  const dispatch = useDispatch()
+  console.log(filtertest);
+
+  console.log(filtertest.filters.length)
+  const [toggle, setToggle] = useState(false);
   const ToggleBtnFilter = (filterName) => {
     if (filter.includes(filterName)) {
       setFilter(filter.filter((x) => x !== filterName));
@@ -59,8 +66,8 @@ function FilterBtn({
             style={{ color: "#d3c0dd", marginRight: "5px" }}
           />{" "}
           Filter
-          {numberOfFilter > 0 ? (
-            <div className="filterNumber">{numberOfFilter}</div>
+          {filtertest.filters.length > 0 ? (
+            <div className="filterNumber">{filtertest.filters.length}</div>
           ) : (
             <></>
           )}
@@ -68,13 +75,13 @@ function FilterBtn({
       </div>
       <div className="col-11 col-md-10 col-lg-10 row gx-0" id="filterBtn">
         {data.data.map((btn) => {
-          if (filter.includes(btn.id)) {
+          if (filtertest.filters.includes(btn.id)) {
             return (
               <button
                 key={btn.id}
                 className="col-5 col-md-2 col-lg-2 my-3 filterBtn"
                 id={btn.id}
-                onClick={() => ToggleBtnFilter(btn.id)}
+                onClick={() => dispatch(addFilter(btn.id))}
                 style={{
                   backgroundColor: "rgb(201, 196, 190)",
                   color: "white",
@@ -90,7 +97,7 @@ function FilterBtn({
                 key={btn.id}
                 className="col-5 col-sm-3 col-md-2 col-lg-2 my-3 filterBtn"
                 id={btn.id}
-                onClick={() => ToggleBtnFilter(btn.id)}
+                onClick={() => dispatch(addFilter(btn.id))}
                 style={{ backgroundColor: "white" }}
               >
                 {btn.attributes.name}

@@ -1,18 +1,18 @@
 import React from "react";
 import "./Categories.css";
-
+import { useSelector, useDispatch } from 'react-redux';
+import { addFilter } from "../../redux/filter/filterSlice";
 import { Link } from "react-router-dom";
-function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
+function Categories() {
+  const filtertest = useSelector((state) => state.filter)
+  const dispatch = useDispatch()
   return (
     <>
       <div className="categoryContainer container d-flex ">
         <div className="categoryRow row d-flex col-12">
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([4]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(9))}
             className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category"
           >
             <div className="">
@@ -21,22 +21,16 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           </Link>
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([5]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(3))}
             className="col-3 col-md-3 col-xl-1 my-2 my-md-5 category"
           >
             <div className="">
-              <span>FISK / SKALDJUR</span>
+              <span>PASTA</span>
             </div>
           </Link>
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([6]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(4))}
             className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
@@ -45,10 +39,7 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           </Link>
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([10]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(5))}
             className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
@@ -57,22 +48,16 @@ function Categories({ setFilter, setNumberOfFilter, numberOfFilter }) {
           </Link>
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([16]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(1))}
             className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>
-              <span>SMÅRÄTTER</span>
+              <span>KYCKLING</span>
             </div>
           </Link>
           <Link
             to={`/recept`}
-            onClick={() => {
-              setFilter([20]);
-              setNumberOfFilter(numberOfFilter + 1);
-            }}
+            onClick={() => dispatch(addFilter(6))}
             className="category col-3 col-md-3 col-xl-1 my-2 my-md-5"
           >
             <div>

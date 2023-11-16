@@ -3,7 +3,6 @@ import FilterBtn from "../../components/FilterContent/FilterBtn";
 import RecipeCard from "../../components/RecipeCards/RecipeCard";
 function Recept({ filter, setFilter, setNumberOfFilter, numberOfFilter }) {
   const [currentPage, setCurrentPage] = useState(1);
-
   return (
     <div>
       <FilterBtn

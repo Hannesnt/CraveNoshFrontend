@@ -12,6 +12,7 @@
 }
 .navbar-expand-lg .navbar-nav{
   justify-content: space-evenly;
+  align-items: center;
 }
 a.FontIcon{
     margin: 0 auto;
@@ -29,10 +30,9 @@ a.FontIcon{
     padding-bottom: 8px;
   }
 
-  .nav-link{
+  .navlink{
 
     font-size: medium;
-    font-weight: bold;
   }
 a.searchBtn{
   background-color: transparent;

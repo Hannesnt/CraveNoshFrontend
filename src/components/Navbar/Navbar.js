@@ -7,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
-
+import { Link } from "react-router-dom";
 function NavbarCom({ setSearchText, searchText }) {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,11 +22,11 @@ function NavbarCom({ setSearchText, searchText }) {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="my-2 col-lg-9">
-            <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="/recept">RECEPT</Nav.Link>
-            <Nav.Link href="/favorites">MINA RECEPT</Nav.Link>
-            <Nav.Link href="/about">OM CRAVE NOSH</Nav.Link>
-            <Nav.Link href="/contact">KONTAKT</Nav.Link>
+            <Link className="navlink" to="/">HOME</Link>
+            <Link className="navlink" to="/recept">RECEPT</Link>
+            <Link className="navlink" to="/favorites">MINA RECEPT</Link>
+            <Link className="navlink" to="/about">OM CRAVE NOSH</Link>
+            <Link className="navlink" to="/contact">KONTAKT</Link>
             <div className="instagramDivNav">
               <a
                 className="FontIcon"

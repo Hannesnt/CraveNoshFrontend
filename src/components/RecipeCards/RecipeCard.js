@@ -4,9 +4,11 @@ import "./RecipeCard.css";
 import FetchFilteredRecipes from "../../hooks/FetchFilteredRecipes";
 import Pagination from "../Pagination/Pagination";
 import { RotatingLines } from "react-loader-spinner";
+import { useSelector } from 'react-redux';
 function RecipeCard({ filter, setCurrentPage, currentPage }) {
+  const filtertest = useSelector((state) => state.filter)
   const { relatedLoading, relatedError, relatedData } =
-    FetchFilteredRecipes(filter);
+    FetchFilteredRecipes(filtertest.filters);
 
   if (relatedLoading)
     return (
